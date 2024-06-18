@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack Game</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  </head>
+  <body>
+    <div id="game">
+      <h1 id="title">Blackjack</h1>
+      <div id="cardPart">
+        <div id="dealer">
+          <h2>Dealer's Hand</h2>
+          <div id="dealer-hand"></div>
+          <p id="dealer-points">Total: ?</p>
+        </div>
+
+        <div id="current">
+          <p id="current-bet"></p>
+        </div>
+
+        <div id="player">
+          <h2>Your Hand</h2>
+          <div id="player-hand"></div>
+          <p id="player-points">Total: ?</p>
+        </div>
+      </div>
+
+      <div id="balance-bet">
+        <div id="balance">
+          <p>Balance: $<span id="balance-amount">1000</span></p>
+        </div>
+
+        <div id="bet">
+          <label for="bet-amount">Bet: </label>
+          <!-- <input type="number" id="bet-amount" min="1" max="1000" value="100" /> -->
+          <div id="coin-container">
+            <div id="b1">
+              <span>+1</span>
+              <img src="images/coin1.png" class="coin" data-value="1" alt="1" />
+            </div>
+            <div id="b2">
+              <span>+5</span>
+              <img src="images/coin5.png" class="coin" data-value="5" alt="5" />
+            </div>
+            <div id="b3">
+              <span>+25</span>
+              <img
+                src="images/coin25.png"
+                class="coin"
+                data-value="25"
+                alt="25"
+              />
+            </div>
+            <div id="b4">
+              <span>+100</span>
+              <img
+                src="images/coin100.png"
+                class="coin"
+                data-value="100"
+                alt="100"
+              />
+            </div>
+            <div id="b5">
+              <span>+500</span>
+              <img
+                src="images/coin500.png"
+                class="coin"
+                data-value="500"
+                alt="500"
+              />
+            </div>
+          </div>
+          <button id="btn-place-bet">Place Bet</button>
+          <button id="btn-reset-bet">Reset Bet</button>
+        </div>
+      </div>
+      <div id="bal_error">
+        <p id="mes"></p>
+      </div>
+
+      <div id="controls">
+        <button id="btn-hit" disabled>Hit</button>
+        <button id="btn-stand" disabled>Stand</button>
+        <button id="btn-new-game">New Game</button>
+      </div>
+
+      <div id="popup-overlay">
+        <div id="popup-message">
+          <p id="message"></p>
+          <div id="buttons">
+            <button id="pop-new-game">New Game</button>
+            <button id="close-button">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cursor"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
