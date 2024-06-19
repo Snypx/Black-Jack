@@ -12,7 +12,7 @@ const newgame = document.getElementById('pop-new-game');
 const balanceBet= document.getElementById('')
 //Hide button
 const hitButton = document.getElementById("btn-hit");
-
+const container = document.getElementById("bet");
 const standButton = document.getElementById("btn-stand");
 const newGameButton = document.getElementById("btn-new-game");
 const placeBetButton = document.getElementById("btn-place-bet");
@@ -69,6 +69,7 @@ function newGame() {
     document.getElementById('btn-reset-bet').disabled = false;
     document.getElementById('btn-new-game').disabled = true;
     document.getElementById('balance-amount').textContent = balance;
+
 
     document.querySelectorAll('.coin').forEach(coin => {
         coin.classList.remove('disabled'); // Enable all coins
@@ -329,6 +330,7 @@ function endGame(message) {
         newGameButton.classList.remove("hidden");
         placeBetButton.classList.add("hidden");
         resetBetButton.classList.add("hidden");
+        container.classList.add('hidden');
       }
     
       function showBetButtons() {
@@ -337,6 +339,7 @@ function endGame(message) {
         newGameButton.classList.add("hidden");
         placeBetButton.classList.remove("hidden");
         resetBetButton.classList.remove("hidden");
+        container.classList.remove('hidden');
       }
 
       function showNew(){
@@ -345,6 +348,7 @@ function endGame(message) {
         newGameButton.classList.remove("hidden");
         placeBetButton.classList.add("hidden");
         resetBetButton.classList.add("hidden");
+        container.classList.add('hidden');
       }
 
       //Cursor

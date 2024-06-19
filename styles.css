@@ -1,6 +1,9 @@
 /* styles.css */
+/*change*/
 *{
     cursor: none;
+    /* padding: 0px;
+    margin: 0px; */
 }
 
 @font-face {
@@ -22,11 +25,12 @@ body {
     font-weight: 400;
     /* font-style: italic; */
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     height: 100vh;
     background-image: url('images/bg3.png');
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
     color: #fff;
     overflow: hidden;
@@ -51,6 +55,7 @@ body {
 
 #dealer, #player {
     margin: auto;
+    /* height: 14rem; */
 }
 
 #dealer-hand, #player-hand {
@@ -290,9 +295,11 @@ p{
 
 /* mobile */
 @media only screen and (max-width: 865px) {
-    /* body{
-        display:inline;
-    } */
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%; /* Ensure the body and html take up the full height of the viewport */
+      }
 
     #cardPart {
         display: flex;
@@ -337,7 +344,7 @@ p{
 
     h1{
         font-size: 1rem;
-        margin: 5px 0px;
+        margin: 10px 0px;
     }
 
     #control{
